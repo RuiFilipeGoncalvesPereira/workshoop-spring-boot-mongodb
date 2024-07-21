@@ -5,8 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.3.0</version>
 	</parent>
 	<groupId>com.rui6.319.hotmail</groupId>
 	<artifactId>workshopmongo</artifactId>
@@ -55,8 +54,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.ruipereira</groupId>
-			<artifactId>aprendizagem</artifactId>
+			<groupId>com.rui6.319.hotmail</groupId>
+			<artifactId>workshopmongo</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
