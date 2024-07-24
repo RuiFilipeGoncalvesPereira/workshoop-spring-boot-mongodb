@@ -1,5 +1,6 @@
 package com.rui6._9.hotmail.workshopmongo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class PostService {
 	{
 		Optional<Post> user = repo.findById(id);
 		return user.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
+	}
+	
+	public List<Post> findByTitle(String text)
+	{
+		return repo.findByTitleContainingIgnoreCase(text);
 	}
 	
     
