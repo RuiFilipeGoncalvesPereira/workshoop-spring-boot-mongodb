@@ -13,6 +13,7 @@ import com.rui6._9.hotmail.workshopmongo.domain.User;
 import com.rui6._9.hotmail.workshopmongo.repository.PostRepository;
 import com.rui6._9.hotmail.workshopmongo.repository.UserRepository;
 import com.rui6._9.hotmail.workshopmongo.dto.AuthorDTO;
+import com.rui6._9.hotmail.workshopmongo.dto.CommentDTO;
 
 
 @Configuration
@@ -41,6 +42,13 @@ public class Instantiation implements CommandLineRunner{
 		
 		Post post1= new Post(null, sdf.parse("21/03/2018"),"Partiu Viagem","Vou viajar para faro.Abraços!", new AuthorDTO(maria));
 		Post post2= new Post(null, sdf.parse("23/03/2018"),"Bom dia","Acordei feliz hoje!", new AuthorDTO(maria));
+		
+		CommentDTO C1 = new  CommentDTO("Boa viagem mano!", sdf.parse("21/03/2018"),new AuthorDTO(alex));
+		CommentDTO C2 = new  CommentDTO("Aproveite", sdf.parse("22/03/2018"),new AuthorDTO(bob));
+		CommentDTO C3 = new  CommentDTO("Tenha um ótimo dia!", sdf.parse("23/03/2018"),new AuthorDTO(alex));
+		
+		post1.getComments().addAll(Arrays.asList(C1,C2));
+		post2.getComments().addAll(Arrays.asList(C3));
 		
 		postRepository.saveAll(Arrays.asList(post1,post2));
 		
