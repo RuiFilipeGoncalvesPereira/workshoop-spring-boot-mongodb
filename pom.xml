@@ -54,18 +54,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.rui6.319.hotmail</groupId>
-			<artifactId>workshopmongo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ruipereira</groupId>
-			<artifactId>aprendizagem</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
